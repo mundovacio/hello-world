@@ -1,3 +1,4 @@
+/* Mobile-first styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,17 +9,18 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 0.5rem;
 }
 
@@ -31,6 +33,17 @@ main {
     padding: 1rem;
 }
 
+section {
+    margin-bottom: 2rem;
+}
+
+.project {
+    background: #f4f4f4;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -39,4 +52,33 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Styles for tablets and larger screens */
+@media(min-width: 600px) {
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    .project {
+        margin: 2rem 0;
+    }
+}
+
+/* Styles for desktops and larger screens */
+@media(min-width: 1024px) {
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .project {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project h3 {
+        margin: 0;
+    }
 }
